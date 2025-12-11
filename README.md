@@ -8,6 +8,8 @@ This contains everything you need to run your app locally.
 
 View your app in AI Studio: https://ai.studio/apps/drive/1TTMQIF16WYSSD748IDgS1ZnY2k5HGN-c
 
+see the website here: https://six-fit-landingpage.vercel.app/
+
 ## Run Locally
 
 **Prerequisites:**  Node.js
