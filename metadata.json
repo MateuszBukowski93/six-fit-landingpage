@@ -1,0 +1,5 @@
+{
+  "name": "Six Fit",
+  "description": "A high-performance fitness application landing page featuring progress tracking, goal setting, and community features. Built with React, Tailwind CSS, and ready for PWA integration.",
+  "requestFramePermissions": []
+}
