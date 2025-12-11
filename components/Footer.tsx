@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -8,16 +7,16 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-12">
           
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2" onClick={() => window.scrollTo(0,0)}>
+          <div className="flex items-center gap-2">
             <span className="material-icons text-primary text-2xl">bolt</span>
             <span className="font-bold text-xl text-white">Six Fit</span>
-          </Link>
+          </div>
           
           {/* Links */}
           <div className="flex gap-8 text-sm text-slate-400">
-            <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
-            <Link to="/support" className="hover:text-primary transition-colors">Support</Link>
+            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-primary transition-colors">Support</a>
           </div>
           
           {/* Socials */}
