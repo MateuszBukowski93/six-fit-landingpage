@@ -27,9 +27,8 @@ const Navbar: React.FC = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-            <span className="material-icons text-primary text-3xl">bolt</span>
-            <span className="font-bold text-xl tracking-tight text-slate-900 dark:text-white">Six Fit</span>
+          <div className="shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
+            <img src="./assets/imgs/favicon.png" alt="Logo" className="w-15 h-15" />
           </div>
           
           {/* Desktop Menu */}
@@ -39,7 +38,7 @@ const Navbar: React.FC = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-slate-600 dark:text-slate-300 hover:text-pink-500 hover:bg-clip-text px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   {item.label}
                 </a>
@@ -52,7 +51,7 @@ const Navbar: React.FC = () => {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-primary hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-transparent hover:bg-sixfit hover:bg-clip-text hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none"
             >
               <span className="material-icons">{mobileMenuOpen ? 'close' : 'menu'}</span>
             </button>
@@ -69,7 +68,7 @@ const Navbar: React.FC = () => {
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+                className="text-slate-600 dark:text-slate-300 hover:text-transparent hover:bg-sixfit hover:bg-clip-text block px-3 py-2 rounded-md text-base font-medium"
               >
                 {item.label}
               </a>
