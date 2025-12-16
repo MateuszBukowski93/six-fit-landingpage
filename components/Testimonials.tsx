@@ -43,20 +43,20 @@ const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
 
 const Testimonials: React.FC = () => {
   return (
-    <section id="testimonials" className="py-20 bg-slate-50 dark:bg-[#050a14]">
+    <section id="testimonials" className="py-20 bg-[#050a14]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white">Stories of Strength</h3>
+          <h3 className="text-3xl md:text-4xl font-extrabold text-white">Stories of Strength</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {TESTIMONIALS_DATA.map((testimonial) => (
             <div 
               key={testimonial.id}
-              className={`p-8 rounded-2xl border border-slate-100 dark:border-slate-800 relative ${
+              className={`p-8 rounded-2xl border border-slate-800 relative ${
                 testimonial.featured 
-                  ? 'bg-linear-to-br from-white to-purple-50/50 dark:from-slate-800 dark:to-purple-900/20 transform md:-translate-y-4 shadow-xl shadow-purple-500/10' 
-                  : 'bg-white dark:bg-surface-dark shadow-lg'
+                  ? 'bg-linear-to-br from-slate-800 to-purple-900/20 transform md:-translate-y-4 shadow-xl shadow-purple-500/10' 
+                  : 'bg-surface-dark shadow-lg'
               }`}
             >
               {testimonial.featured && (
@@ -67,7 +67,7 @@ const Testimonials: React.FC = () => {
               
               <StarRating rating={testimonial.rating} />
               
-              <p className="text-slate-700 dark:text-slate-300 mb-6 italic">
+              <p className="text-slate-300 mb-6 italic">
                 {testimonial.content}
               </p>
               
@@ -78,7 +78,7 @@ const Testimonials: React.FC = () => {
                   className="w-12 h-12 rounded-full object-cover border-2 border-pink-500"
                 />
                 <div>
-                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">{testimonial.name}</h5>
+                  <h5 className="font-bold text-white text-sm">{testimonial.name}</h5>
                   <span className="text-xs text-slate-500">{testimonial.role}</span>
                 </div>
               </div>

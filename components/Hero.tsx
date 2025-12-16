@@ -10,8 +10,8 @@ const Hero: React.FC = () => {
     <section className="relative pt-32 pb-16 lg:pt-48 lg:pb-32 overflow-hidden">
       {/* Background Ambient Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-purple-500/20 rounded-full blur-[100px] opacity-50 dark:opacity-30"></div>
-        <div className="absolute bottom-0 right-10 w-80 h-80 bg-blue-500/20 rounded-full blur-[100px] opacity-30 dark:opacity-20"></div>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-purple-500/20 rounded-full blur-[100px] opacity-30"></div>
+        <div className="absolute bottom-0 right-10 w-80 h-80 bg-blue-500/20 rounded-full blur-[100px] opacity-20"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -20,9 +20,9 @@ const Hero: React.FC = () => {
           {/* Text Content */}
           <div className="w-full lg:w-1/2 text-center lg:text-left order-1">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-              <span className="text-gradient bg-sixfit">Six Fit:</span> Your Path to <span className="text-slate-900 dark:text-white">Strength</span>
+              <span className="text-gradient bg-sixfit">Six Fit:</span> Your Path to <span className="text-white">Strength</span>
             </h1>
-            <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               Track your progress, smash your goals, and transform your body with structured challenges designed for every fitness level.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -35,12 +35,12 @@ const Hero: React.FC = () => {
               </a>
               <a 
                 href="#features"
-                className="inline-flex items-center justify-center px-8 py-4 border border-slate-300 dark:border-slate-700 text-base font-semibold rounded-full text-slate-700 dark:text-slate-200 bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 border border-slate-700 text-base font-semibold rounded-full text-slate-200 bg-transparent hover:bg-slate-800 transition-all duration-300"
               >
                 Learn More
               </a>
             </div>
-            <div className="mt-10 flex items-center justify-center lg:justify-start gap-6 text-sm text-slate-500 dark:text-slate-400">
+            <div className="mt-10 flex items-center justify-center lg:justify-start gap-6 text-sm text-slate-400">
               <div className="flex items-center gap-2">
                 <span className="material-icons text-gradient bg-sixfit text-xl">check_circle</span>
                 <span>10k+ Downloads</span>
@@ -85,15 +85,15 @@ const Hero: React.FC = () => {
                   </div>
 
                   {/* Main Card */}
-                  <div className="mx-0 bg-surface-light dark:bg-surface-dark/40 backdrop-blur-xl border border-white/10 p-6 rounded-3xl shadow-lg relative overflow-hidden group mb-4">
+                  <div className="mx-0 bg-surface-dark/40 backdrop-blur-xl border border-white/10 p-6 rounded-3xl shadow-lg relative overflow-hidden group mb-4">
                     <div className="absolute top-0 right-0 p-4 opacity-10">
                       <span className="material-icons text-6xl text-gradient bg-sixfit">fitness_center</span>
                     </div>
                     <div className="mb-2">
                       <span className="bg-pink-500/10 text-pink-500 text-xs font-bold px-2 py-1 rounded-full">Active Challenge</span>
                     </div>
-                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">5-Minute Plank</h2>
-                    <div className="text-4xl font-extrabold text-slate-900 dark:text-white mb-2">2:30 <span className="text-sm font-normal text-slate-500">min</span></div>
+                    <h2 className="text-2xl font-bold text-white mb-1">5-Minute Plank</h2>
+                    <div className="text-4xl font-extrabold text-white mb-2">2:30 <span className="text-sm font-normal text-slate-500">min</span></div>
                     <p className="text-gradient bg-sixfit text-sm font-medium flex items-center gap-1 mb-6">
                       <span className="material-icons text-sm">trending_up</span>
                       Goal: 100 Reps (+15%)
@@ -101,15 +101,15 @@ const Hero: React.FC = () => {
                     
                     {/* Chart */}
                     <div className="h-24 w-full flex items-end justify-between gap-1">
-                      <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-t-lg h-[40%]"></div>
-                      <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-t-lg h-[60%]"></div>
-                      <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-t-lg h-[30%]"></div>
-                      <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-t-lg h-[80%]"></div>
+                      <div className="w-full bg-slate-700 rounded-t-lg h-[40%]"></div>
+                      <div className="w-full bg-slate-700 rounded-t-lg h-[60%]"></div>
+                      <div className="w-full bg-slate-700 rounded-t-lg h-[30%]"></div>
+                      <div className="w-full bg-slate-700 rounded-t-lg h-[80%]"></div>
                       <div className="w-full bg-sixfit rounded-t-lg h-[65%] relative group-hover:scale-105 transition-transform origin-bottom">
                         <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-bold px-1.5 py-0.5 rounded shadow">Today</div>
                       </div>
-                      <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-t-lg h-[45%]"></div>
-                      <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-t-lg h-[55%]"></div>
+                      <div className="w-full bg-slate-700 rounded-t-lg h-[45%]"></div>
+                      <div className="w-full bg-slate-700 rounded-t-lg h-[55%]"></div>
                     </div>
                     <div className="flex justify-between text-[10px] text-slate-500 mt-2 px-1">
                       <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
@@ -155,14 +155,14 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Floating Badge */}
-            <div className="absolute -bottom-30 -right-12 lg:right-0 bg-surface-light dark:bg-surface-dark p-4 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 animate-bounce delay-1000 hidden sm:block">
+            <div className="absolute -bottom-30 -right-12 lg:right-0 bg-surface-dark p-4 rounded-2xl shadow-xl border border-slate-800 animate-bounce delay-1000 hidden sm:block">
               <div className="flex items-center gap-3">
-                <div className="bg-orange-100 dark:bg-orange-900/30 p-2 rounded-full text-orange-500">
+                <div className="bg-orange-900/30 p-2 rounded-full text-orange-500">
                   <span className="material-icons text-xl">local_fire_department</span>
                 </div>
                 <div>
                   <div className="text-xs text-slate-500 font-medium">Streak</div>
-                  <div className="text-sm font-bold text-slate-900 dark:text-white">12 Days 🔥</div>
+                  <div className="text-sm font-bold text-white">12 Days 🔥</div>
                 </div>
               </div>
             </div>

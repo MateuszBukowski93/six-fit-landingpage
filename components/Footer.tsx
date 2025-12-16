@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="text-center text-xs text-slate-600 border-t border-slate-800 pt-8">
+        <div className="text-center text-xs text-slate-400 border-t border-slate-800 pt-8">
           © 2023 Six Fit. All rights reserved.
         </div>
       </div>

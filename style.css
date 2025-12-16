@@ -3,9 +3,9 @@
 @theme {
   --color-primary: #22c55e;
   --color-primary-dark: #16a34a;
-  --color-background-light: #f8fafc;
+  --color-background-light: #020617; /* Enforcing dark background */
   --color-background-dark: #020617;
-  --color-surface-light: #ffffff;
+  --color-surface-light: #0f172a; /* Enforcing dark surface */
   --color-surface-dark: #0f172a;
 
   --font-display: "Inter", "sans-serif";
