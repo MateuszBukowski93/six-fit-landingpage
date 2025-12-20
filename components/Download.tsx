@@ -2,8 +2,13 @@ import React from 'react';
 import { analytics } from '../services/firebaseService';
 
 const Download: React.FC = () => {
-  const trackDownload = (platform: string) => {
+  const handleDownload = (platform: string) => {
     analytics.logEvent('download_click', { platform });
+    if(platform == 'ios'){
+      window.open('https://apps.apple.com/', '_blank');
+    }else if(platform == 'android'){
+      window.open('https://play.google.com/store/apps/','blank');
+    }
   };
 
   return (
@@ -20,7 +25,7 @@ const Download: React.FC = () => {
         
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <button 
-            onClick={() => trackDownload('ios')}
+            onClick={() => handleDownload('ios')}
             className="flex items-center justify-center gap-3 bg-white text-slate-900 px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors duration-200 w-full sm:w-auto min-w-45 cursor-pointer"
           >
             <span className="material-icons text-3xl">apple</span>
@@ -31,7 +36,7 @@ const Download: React.FC = () => {
           </button>
           
           <button 
-            onClick={() => trackDownload('android')}
+            onClick={() => handleDownload('android')}
             className="flex items-center justify-center gap-3 bg-transparent border border-white/30 text-white px-6 py-3 rounded-xl hover:bg-white/10 transition-colors duration-200 w-full sm:w-auto min-w-45 cursor-pointer"
           >
             <span className="material-icons text-3xl text-gradient bg-green-500">android</span>

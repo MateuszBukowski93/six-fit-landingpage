@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-slate-300 hover:text-pink-500 hover:bg-clip-text px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-slate-300 hover:text-green-500 hover:bg-clip-text px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   {item.label}
                 </a>
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-transparent hover:bg-sixfit hover:bg-clip-text hover:bg-slate-800 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-transparent hover:bg-green-500 hover:bg-clip-text focus:outline-none"
             >
               <span className="material-icons">{mobileMenuOpen ? 'close' : 'menu'}</span>
             </button>
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-slate-300 hover:text-transparent hover:bg-sixfit hover:bg-clip-text block px-3 py-2 rounded-md text-base font-medium"
+                className="text-slate-300 hover:text-transparent hover:bg-green-500 hover:bg-clip-text block px-3 py-2 rounded-md text-base font-medium"
               >
                 {item.label}
               </a>

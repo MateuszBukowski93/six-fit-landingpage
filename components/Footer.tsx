@@ -14,9 +14,9 @@ const Footer: React.FC = () => {
           
           {/* Links */}
           <div className="flex gap-8 text-sm text-slate-400">
-            <a href="#" className="hover:text-pink-500 hover:bg-clip-text transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-pink-500 hover:bg-clip-text transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-pink-500 hover:bg-clip-text transition-colors">Support</a>
+            <a href="#" className="hover:text-green-500 hover:bg-clip-text transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-green-500 hover:bg-clip-text transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-green-500 hover:bg-clip-text transition-colors">Support</a>
           </div>
           
           {/* Socials */}
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
             {[SiX, SiFacebook, SiLinkedin].map((SocialIcon, i) => (
               <a 
                 key={i} 
-                href="#" 
+                href={i==0 ? 'https://x.com' : i==1 ? 'https://www.facebook.com' : 'https://www.linkedin.com'}
                 className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-sixfit hover:text-white transition-all"
               >
                 <SocialIcon size={20}/>

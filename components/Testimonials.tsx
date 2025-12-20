@@ -53,14 +53,14 @@ const Testimonials: React.FC = () => {
           {TESTIMONIALS_DATA.map((testimonial) => (
             <div 
               key={testimonial.id}
-              className={`p-8 rounded-2xl border border-slate-800 relative ${
+              className={`p-8 rounded-2xl border relative ${
                 testimonial.featured 
-                  ? 'bg-linear-to-br from-slate-800 to-purple-900/20 transform md:-translate-y-4 shadow-xl shadow-purple-500/10' 
-                  : 'bg-surface-dark shadow-lg'
+                  ? 'border-green-500/30 bg-linear-to-br from-green-900/40 to-green-900/10 transform md:-translate-y-4 shadow-xl shadow-green-500/10' 
+                  : 'border-slate-800 bg-surface-dark shadow-lg'
               }`}
             >
               {testimonial.featured && (
-                <div className="absolute -top-3 right-8 bg-sixfit text-white text-[10px] font-bold px-2 py-1 rounded shadow">
+                <div className="absolute -top-3 right-8 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow">
                   FEATURED
                 </div>
               )}
@@ -75,7 +75,7 @@ const Testimonials: React.FC = () => {
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.name} 
-                  className="w-12 h-12 rounded-full object-cover border-2 border-pink-500"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-green-500"
                 />
                 <div>
                   <h5 className="font-bold text-white text-sm">{testimonial.name}</h5>
