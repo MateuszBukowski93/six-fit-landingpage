@@ -43,31 +43,31 @@ const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
 
 const Testimonials: React.FC = () => {
   return (
-    <section id="testimonials" className="py-20 bg-slate-50 dark:bg-[#050a14]">
+    <section id="testimonials" className="py-20 bg-[#050a14]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white">Stories of Strength</h3>
+          <h3 className="text-3xl md:text-4xl font-extrabold text-white">Stories of Strength</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {TESTIMONIALS_DATA.map((testimonial) => (
             <div 
               key={testimonial.id}
-              className={`bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-lg border relative ${
+              className={`p-8 rounded-2xl border relative ${
                 testimonial.featured 
-                  ? 'border-primary/30 transform md:-translate-y-4' 
-                  : 'border-slate-100 dark:border-slate-800'
+                  ? 'border-green-500/30 bg-linear-to-br from-green-900/40 to-green-900/10 transform md:-translate-y-4 shadow-xl shadow-green-500/10' 
+                  : 'border-slate-800 bg-surface-dark shadow-lg'
               }`}
             >
               {testimonial.featured && (
-                <div className="absolute -top-3 right-8 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded shadow">
+                <div className="absolute -top-3 right-8 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow">
                   FEATURED
                 </div>
               )}
               
               <StarRating rating={testimonial.rating} />
               
-              <p className="text-slate-700 dark:text-slate-300 mb-6 italic">
+              <p className="text-slate-300 mb-6 italic">
                 {testimonial.content}
               </p>
               
@@ -75,10 +75,10 @@ const Testimonials: React.FC = () => {
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.name} 
-                  className="w-12 h-12 rounded-full object-cover border-2 border-primary"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-green-500"
                 />
                 <div>
-                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">{testimonial.name}</h5>
+                  <h5 className="font-bold text-white text-sm">{testimonial.name}</h5>
                   <span className="text-xs text-slate-500">{testimonial.role}</span>
                 </div>
               </div>
