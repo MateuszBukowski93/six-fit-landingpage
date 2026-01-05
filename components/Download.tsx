@@ -2,13 +2,18 @@ import React from 'react';
 import { analytics } from '../services/firebaseService';
 
 const Download: React.FC = () => {
-  const trackDownload = (platform: string) => {
+  const handleDownload = (platform: string) => {
     analytics.logEvent('download_click', { platform });
+    if(platform == 'ios'){
+      window.open('https://apps.apple.com/', '_blank');
+    }else if(platform == 'android'){
+      window.open('https://play.google.com/store/apps/','blank');
+    }
   };
 
   return (
     <section id="download" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-black z-0"></div>
+      <div className="absolute inset-0 bg-linear-to-br from-slate-900 to-black z-0"></div>
       {/* Pattern Overlay */}
       <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] z-0"></div>
       
@@ -20,8 +25,8 @@ const Download: React.FC = () => {
         
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <button 
-            onClick={() => trackDownload('ios')}
-            className="flex items-center justify-center gap-3 bg-white text-slate-900 px-6 py-3 rounded-xl hover:bg-gray-100 transition-colors duration-200 w-full sm:w-auto min-w-[180px]"
+            onClick={() => handleDownload('ios')}
+            className="flex items-center justify-center gap-3 bg-white text-slate-900 px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors duration-200 w-full sm:w-auto min-w-45 cursor-pointer"
           >
             <span className="material-icons text-3xl">apple</span>
             <div className="text-left">
@@ -31,10 +36,10 @@ const Download: React.FC = () => {
           </button>
           
           <button 
-            onClick={() => trackDownload('android')}
-            className="flex items-center justify-center gap-3 bg-transparent border border-white/30 text-white px-6 py-3 rounded-xl hover:bg-white/10 transition-colors duration-200 w-full sm:w-auto min-w-[180px]"
+            onClick={() => handleDownload('android')}
+            className="flex items-center justify-center gap-3 bg-transparent border border-white/30 text-white px-6 py-3 rounded-xl hover:bg-white/10 transition-colors duration-200 w-full sm:w-auto min-w-45 cursor-pointer"
           >
-            <span className="material-icons text-3xl text-primary">android</span>
+            <span className="material-icons text-3xl text-gradient bg-green-500">android</span>
             <div className="text-left">
               <div className="text-[10px] uppercase font-bold text-slate-400">Get it on</div>
               <div className="text-lg font-bold leading-none">Google Play</div>
