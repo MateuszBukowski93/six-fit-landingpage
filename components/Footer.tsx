@@ -1,5 +1,6 @@
 import React from 'react';
 import {SiFacebook, SiLinkedin, SiX} from 'react-icons/si';
+import logo from '../assets/imgs/logo.png';
 
 const Footer: React.FC = () => {
     return (
@@ -9,7 +10,7 @@ const Footer: React.FC = () => {
           
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img src="/assets/imgs/logo.png" alt="Logo" className="w-15 h-15" />
+            <img src={logo} alt="Logo" className="w-15 h-15" />
           </div>
           
           {/* Links */}
