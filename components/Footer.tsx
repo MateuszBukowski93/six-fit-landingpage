@@ -9,17 +9,18 @@ const Footer: React.FC = () => {
           
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img src="./assets/imgs/favicon.png" alt="Logo" className="w-15 h-15" />
+            <img src="/assets/imgs/logo.png" alt="Logo" className="w-15 h-15" />
           </div>
           
           {/* Links */}
           <div className="flex gap-8 text-sm text-slate-400">
-            <a href="#" className="hover:text-green-500 hover:bg-clip-text transition-colors">Privacy Policy</a>
+            <a href="/privacy-policy" className="hover:text-green-500 hover:bg-clip-text transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-green-500 hover:bg-clip-text transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-green-500 hover:bg-clip-text transition-colors">Support</a>
           </div>
           
           {/* Socials */}
+          {/* 
           <div className="flex gap-4">
             {[SiX, SiFacebook, SiLinkedin].map((SocialIcon, i) => (
               <a 
@@ -31,10 +32,11 @@ const Footer: React.FC = () => {
               </a>
             ))}
           </div>
+          */}
         </div>
         
         <div className="text-center text-xs text-slate-400 border-t border-slate-800 pt-8">
-          © 2023 Six Fit. All rights reserved.
+          &copy; 2026 Six Fit. All rights reserved.
         </div>
       </div>
     </footer>

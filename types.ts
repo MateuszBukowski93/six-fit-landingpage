@@ -19,3 +19,36 @@ export interface NavItem {
   label: string;
   href: string;
 }
+
+export interface WorkoutPlan {
+  id: string;
+  name: {
+    en: string;
+    pl: string;
+  };
+  targetReps: number;
+  targetDuration?: number; // in minutes
+  category: 'strength' | 'cardio' | 'flexibility';
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  description: {
+    en: string;
+    pl: string;
+  };
+  icon: string;
+}
+
+export interface CustomWorkout {
+  id: string;
+  name: string;
+  exercises: WorkoutExercise[];
+  duration: number; // in weeks
+  created: Date;
+}
+
+export interface WorkoutExercise {
+  planId: string;
+  sets: number;
+  reps: number;
+  restTime: number; // in seconds
+  notes?: string;
+}

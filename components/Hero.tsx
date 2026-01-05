@@ -2,8 +2,26 @@ import React from 'react';
 import { analytics } from '../services/firebaseService';
 
 const Hero: React.FC = () => {
+  const GOOGLE_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.bukos.minrepsapp&pli=1';
+  const APP_STORE_URL = 'https://apps.apple.com/us/app/sixfit/id6751943924';
+
+  const detectDevice = () => {
+    const userAgent = navigator.userAgent || navigator.vendor;
+    if (/iPad|iPhone|iPod/.test(userAgent)) {
+      return 'ios';
+    } else if (/android/i.test(userAgent)) {
+      return 'android';
+    }
+    return 'unknown';
+  };
+
   const handleDownloadClick = () => {
     analytics.logEvent('click_download_hero');
+    
+    const device = detectDevice();
+    const targetUrl = device === 'ios' ? APP_STORE_URL : GOOGLE_PLAY_URL;
+    
+    window.open(targetUrl, '_blank');
   };
 
   return (
@@ -20,19 +38,18 @@ const Hero: React.FC = () => {
           {/* Text Content */}
           <div className="w-full lg:w-1/2 text-center lg:text-left order-1">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-              <span className="text-gradient bg-green-400">Six Fit:</span> Your Path to <span className="text-white">Strength</span>
+              <span className="text-gradient bg-green-400">Six Fit:</span> Transform Your <span className="text-white">Body in 6 Weeks</span>
             </h1>
             <p className="text-lg sm:text-xl text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Track your progress, smash your goals, and transform your body with structured challenges designed for every fitness level.
+              Choose from proven 6-week workout plans or create custom routines. Perfect for beginners and fitness enthusiasts who want structured, effective training at home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a 
-                href="#download" 
+              <button 
                 onClick={handleDownloadClick}
                 className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-full text-white bg-green-500 hover:bg-green-600 transition-all duration-300 shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Download Now
-              </a>
+              </button>
               <a 
                 href="#features"
                 className="inline-flex items-center justify-center px-8 py-4 border border-slate-700 text-base font-semibold rounded-full text-slate-200 bg-transparent hover:bg-slate-800 transition-all duration-300"
@@ -43,7 +60,7 @@ const Hero: React.FC = () => {
             <div className="mt-10 flex items-center justify-center lg:justify-start gap-6 text-sm text-slate-400">
               <div className="flex items-center gap-2">
                 <span className="material-icons text-gradient bg-green-500 text-xl">check_circle</span>
-                <span>10k+ Downloads</span>
+                <span>1,000+ Downloads</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="material-icons text-gradient bg-green-500 text-xl">star</span>

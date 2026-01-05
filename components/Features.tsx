@@ -4,21 +4,21 @@ import { Feature } from '../types';
 const FEATURES_DATA: Feature[] = [
   {
     id: 1,
-    icon: 'insights',
-    title: 'Progress Tracking',
-    description: 'Visualize your gains with intuitive charts. Track your progress, smash your goals, and transform your body with data-driven insights.'
+    icon: 'fitness_center',
+    title: '6-Week Workout Plans',
+    description: 'Choose from proven workout plans designed to transform your fitness in just 6 weeks. From push-ups to pull-ups, we have plans for every goal.'
   },
   {
     id: 2,
-    icon: 'track_changes',
-    title: 'Goal Setting',
-    description: 'Set custom targets for strength, cardio, or flexibility. Transform your goals into structured daily challenges that keep you motivated.'
+    icon: 'build',
+    title: 'Custom Workout Builder',
+    description: 'Mix and match exercises from our proven plans to create your perfect personalized workout routine. Set your own sets, reps, and duration.'
   },
   {
     id: 3,
-    icon: 'fitness_center',
-    title: 'Workout Variety',
-    description: 'Access hundreds of exercises. From HIIT to Yoga, find the perfect workout to aid your structured challenges and crush limits.'
+    icon: 'home',
+    title: 'Train Anywhere',
+    description: 'No equipment needed! All workouts can be done at home, making it perfect for busy professionals and beginners starting their fitness journey.'
   }
 ];
 

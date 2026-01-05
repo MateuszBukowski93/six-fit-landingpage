@@ -2,13 +2,34 @@ import React from 'react';
 import { analytics } from '../services/firebaseService';
 
 const Download: React.FC = () => {
-  const handleDownload = (platform: string) => {
-    analytics.logEvent('download_click', { platform });
-    if(platform == 'ios'){
-      window.open('https://apps.apple.com/', '_blank');
-    }else if(platform == 'android'){
-      window.open('https://play.google.com/store/apps/','blank');
+  const GOOGLE_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.bukos.minrepsapp&pli=1';
+  const APP_STORE_URL = 'https://apps.apple.com/us/app/sixfit/id6751943924';
+
+  const detectDevice = () => {
+    const userAgent = navigator.userAgent || navigator.vendor;
+    if (/iPad|iPhone|iPod/.test(userAgent)) {
+      return 'ios';
+    } else if (/android/i.test(userAgent)) {
+      return 'android';
     }
+    return 'unknown';
+  };
+
+  const handleDownload = (platform?: string) => {
+    analytics.logEvent('download_click', { platform });
+    
+    let targetUrl = GOOGLE_PLAY_URL; // Default to Google Play
+    
+    if (platform) {
+      // If platform is explicitly specified
+      targetUrl = platform === 'ios' ? APP_STORE_URL : GOOGLE_PLAY_URL;
+    } else {
+      // Auto-detect device
+      const device = detectDevice();
+      targetUrl = device === 'ios' ? APP_STORE_URL : GOOGLE_PLAY_URL;
+    }
+    
+    window.open(targetUrl, '_blank');
   };
 
   return (

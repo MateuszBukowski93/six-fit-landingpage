@@ -4,27 +4,27 @@ import { Testimonial } from '../types';
 const TESTIMONIALS_DATA: Testimonial[] = [
   {
     id: 1,
-    name: 'Sarah K.',
-    role: 'Pro Member',
+    name: 'Mateusz Bukowski',
+    role: 'Busy Professional',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCkOoEMLhJWmDkrfNl6xk05-8u5PkjS6guvhxFG0pj7u90o1Vla6A1TWFyQme1c2-zCvHEUfiMPdVUQ0OFUIpzhVM1Nb_bA1INLb18HL-fqbOBEATsCX6TruCBT_28Gx2EVce4SFwQNRODTecss8YTxdySjAyVoYXZKB9HL2GkAnMgbyKeUlDd6AHdajf-toanrek5OOoOmv9S9xHWxYVaNcSbc8cCO8EdDJ-rTnt1zq1-eJwuJUEQHqd19gBzCeGPf5qB7-djoEFZ4',
-    content: '"Six Fit helped me crush my goals! The tracking features are incredible and keep me honest every single day."',
+    content: '"Bardzo podoba mi się to, że mam przygotowane proste plany, które wykonuję przed wyjściem do pracy. Idealne na początek dnia!"',
     rating: 5
   },
   {
     id: 2,
-    name: 'Mark B.',
-    role: 'Elite Athlete',
+    name: 'Tomasz Wardyn',
+    role: 'Fitness Beginner',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCxKKhvouf_7xTb5Wp23TXoR85e-hURXrzGNMCsHzMbu08Oh54HmnARLLmGzdR8P7whfqozKaSVhfJnc7nFBFFeMwtN_06qgWKOm4NE6ukGkmVoI8VefWLhl3EiEufUzsCDTXLJjKoNwILg6UvlWtY0CuCv9BZjWtuyKIaSOeSKlbVis_ZJQdzX080ASXBuQD9g683Jw5PZcV1hKm3JyBLkDngkQrOCYTNpJ6tvLhvazTzfGiNBqkHdVUuM1aOjyK2Vkc_BJtznjf8V',
-    content: '"I\'ve gained strength and confidence. The community challenges push me harder than I ever could alone."',
+    content: '"Świetna aplikacja, jeśli ktoś chce zacząć przygodę z treningiem zamiast iść na siłownię i zastanawiać się co ćwiczyć. Wszystko jasno i prosto!"',
     rating: 5,
     featured: true
   },
   {
     id: 3,
-    name: 'James L.',
-    role: 'Fitness Enthusiast',
+    name: 'Arek Daszkowski',
+    role: 'Gym Regular',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCOTNfLZj2w7FOHy-NmDP3DJgy3g71u4kD1luNPwDr_riCKf9Px7kAYVqkQ7km8TCUiS7mf8ZKUE99a3KGolmMPI1l9ZkazquT36gaaNesrKJ92jaSNBCyvlDt6LWWPPmsO31NpOdzCqQraZfrt684-FIS34f1NH5OWhmx5usN4yPX4sl8rjPEf3Xv2rrmFQRJ9KnRhp0Bq9RNzu3dIvtT2K2zXq8alvA9U19447aLDLOrL_QEPspNW8Upf03Q2pGEgY2R-IfCczOHD',
-    content: '"Simply the best fitness app on the market. The interface is clean and the workout variety is unmatched."',
+    content: '"Dla mnie to świetne uzupełnienie normalnych treningów, które wykonuję na siłowni. Te mogę robić, gdy nie mam czasu wyjść na siłownię."',
     rating: 4.5
   }
 ];
