@@ -19,6 +19,21 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      build: {
+        assetsDir: 'assets',
+        rollupOptions: {
+          output: {
+            assetFileNames: (assetInfo) => {
+              const info = assetInfo.name.split('.');
+              const extType = info[info.length - 1];
+              if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
+                return `assets/imgs/[name]-[hash][extname]`;
+              }
+              return `assets/[name]-[hash][extname]`;
+            }
+          }
+        }
       }
     };
 });
